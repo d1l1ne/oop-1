@@ -301,7 +301,9 @@ bool Triangle::isTriangle() {
 	}
 }
 bool Triangle::isEqual(Triangle t2) {
-	if (a_.getX() == t2.a_.getX() && a_.getY() == t2.a_.getY() && b_.getX() == t2.b_.getX() && b_.getY() == t2.b_.getY() && c_.getX() == t2.c_.getX() && c_.getY() == t2.c_.getY()) {
+	if (((a_.getX() == t2.a_.getX()&& a_.getY() == t2.a_.getY())&&(((b_.getX() == t2.b_.getX() && b_.getY() == t2.b_.getY())&& (c_.getX() == t2.c_.getX() && c_.getY() == t2.c_.getY()))|| ((b_.getX() == t2.c_.getX() && b_.getY() == t2.c_.getY()) && (c_.getX() == t2.b_.getX() && c_.getY() == t2.b_.getY()))))||
+		((a_.getX() == t2.b_.getX() && a_.getY() == t2.b_.getY()) && (((b_.getX() == t2.a_.getX() && b_.getY() == t2.a_.getY()) && (c_.getX() == t2.c_.getX() && c_.getY() == t2.c_.getY())) || ((b_.getX() == t2.c_.getX() && b_.getY() == t2.c_.getY()) && (c_.getX() == t2.a_.getX() && c_.getY() == t2.a_.getY()))))||
+		((a_.getX() == t2.c_.getX() && a_.getY() == t2.c_.getY()) && (((a_.getX() == t2.a_.getX() && a_.getY() == t2.a_.getY()) && (b_.getX() == t2.b_.getX() && b_.getY() == t2.b_.getY())) || ((a_.getX() == t2.b_.getX() && a_.getY() == t2.b_.getY()) && (b_.getX() == t2.a_.getX() && b_.getY() == t2.a_.getY()))))) {
 		return true;
 	}
 	else {
